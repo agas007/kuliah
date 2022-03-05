@@ -1,3 +1,7 @@
+<?php
+include 'functions.php';
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -11,12 +15,20 @@
 <body>
     <h1>Daftar Mahasiswa</h1>
 
+
     <a href="tambah.php">Tambah Data Mahasiswa</a>
 
-    <input type="text" placeholder="masukkan keyword pencarian" name="search">
-    <input type="submit" value="Search" name="search">
+    <br> <br>
 
-    <table>
+    <form action="search.php" method="get">
+        <input type="text" placeholder="masukkan keyword pencarian" name="search" autocomplete="off">
+        <input type="submit" value="Search" name="search">
+    </form>
+
+
+    <br> <br>
+
+    <table border="black">
         <tr>
             <th>No.</th>
             <th>Aksi</th>
@@ -28,9 +40,14 @@
         </tr>
 
         <!-- penginputan menggunakan PHP -->
-        <tr>
-            <td></td>
-        </tr>
+        <?php for ($i = 0; $i < 5; $i++) : ?>
+            <tr>
+                <td>
+                    <php=>
+                        </php>
+                </td>
+            </tr>
+        <?php endfor; ?>
     </table>
 </body>
 
